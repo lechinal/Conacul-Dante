@@ -1,0 +1,113 @@
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Lora:wght@400;700&family=Roboto:wght@400;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+:root {
+  /* Paleta culori */
+  --primaryColor: #51a3a3;
+  --secondaryColor: #f2e8c9;
+  --backgroundColor: #fff;
+  --backgroundColor2: #f9f5f0;
+  --secondaryBackgroundColor: #192733;
+  --actionColor: #fc9e4f;
+  --textColor: #191919;
+  --textColor2: #b6c7d6;
+  --textColor3: #4a4a4a;
+
+  /* Font principal pentru text de corp */
+  --font-body: "Lora", "Roboto", system-ui, -apple-system, BlinkMacSystemFont,
+    "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+
+  /* Font alternativ pentru text de corp (Roboto) */
+  --font-body2: "Roboto", system-ui, -apple-system, BlinkMacSystemFont,
+    "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+
+  /* Font pentru titluri */
+  --font-heading: "Playfair Display", Georgia, serif;
+
+  /* Setari generale pentru text */
+  font-family: var(--font-body);
+  line-height: 1.6;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: var(--textColor);
+  background-color: var(--backgroundColor);
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  /* Font Sizes */
+  --fontSize8: 8px;
+  --fontSize10: 10px;
+  --fontSize12: 12px;
+  --fontSize14: 14px;
+  --fontSize16: 16px;
+  --fontSize18: 18px;
+  --fontSize19: 19px;
+  --fontSize20: 20px;
+  --fontSize22: 22px;
+  --fontSize24: 24px;
+  --fontSize26: 26px;
+  --fontSize28: 28px;
+  --fontSize30: 30px;
+  --fontSize40: 40px;
+  --fontSize50: 50px;
+  --fontSize60: 60px;
+  --fontSize70: 70px;
+
+  /* Font Weight */
+  --fontWeight700: 700;
+  --fontWeight400: 400;
+
+  /* Font Height */
+  --fontHeightText16: 1.6;
+  --fontHeightTitle: 1.2;
+
+  /* Border Radius */
+  --borderRadius8: 8px;
+  --borderRadius10: 10px;
+  --borderRadius20: 20px;
+  --borderRadius25: 25px;
+  --borderRadius30: 30px;
+
+  /* Flex */
+  --gap10: 10px;
+  --gap20: 20px;
+  --gap25: 25px;
+  --gap30: 30px;
+}
+
+/* Stiluri pentru titluri */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+/* Stiluri pentru paragrafe si text de corp */
+p,
+body {
+  font-family: var(--font-body);
+}
+
+ul {
+  list-style: none;
+  text-decoration: none;
+  margin: 0;
+  padding: 0;
+}
+
+button {
+  cursor: pointer;
+}

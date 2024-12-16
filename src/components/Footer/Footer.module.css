@@ -1,0 +1,130 @@
+.footer {
+  background-color: var(--secondaryBackgroundColor);
+  color: var(--textColor2);
+
+  margin: 0 auto;
+  text-align: center;
+
+  display: flex;
+  flex-direction: column;
+  gap: var(--gap25);
+}
+
+/* .social */
+.social {
+  padding-top: 20px;
+}
+.socialList {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+/* Contact */
+
+.contact {
+  font-size: var(--fontSize14);
+  color: var(--textColor2);
+}
+
+.contact h4 {
+  font-weight: var(--fontWeight700);
+  margin-bottom: 10px;
+}
+
+.contact a {
+  color: var(--primaryColor);
+  text-decoration: none;
+}
+
+.contact a:hover {
+  text-decoration: underline;
+}
+
+.contactBox {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.contactAddress,
+.contactPhone,
+.contactEmail {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+/* .copyright */
+.copyright img {
+  transition: color 0.3s ease-in-out;
+}
+
+.copyright img:hover {
+  transform: scale(1.1);
+}
+
+.copyright p {
+  color: var(--textColor2);
+}
+
+/* .siteMap */
+
+.sitemapList {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+
+  padding-bottom: 20px;
+}
+.sitemapList a {
+  color: var(--backgroundColor);
+  font-weight: var(--fontWeight700);
+}
+.sitemapList a:global(.active) {
+  color: var(--primaryColor);
+}
+
+.sitemapList li:hover a {
+  color: var(--actionColor);
+  transition: color 0.3s ease-in-out;
+}
+
+.sitemapList li::after {
+  content: "|";
+  margin-left: 17px;
+  color: var(--textColor2);
+}
+
+.sitemapList li:last-child::after {
+  content: "";
+  /* Elimina separatorul pentru ultimul element */
+}
+
+/* Stiluri pentru ecrane mai mici */
+
+@media (min-width: 530px) {
+  .socialList::before,
+  .socialList::after {
+    content: "";
+    display: block;
+
+    height: 2px;
+    background-color: #b6c7d6;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  .socialList::before {
+    left: 150px;
+    width: 20%;
+  }
+
+  .socialList::after {
+    right: 150px;
+    width: 20%;
+  }
+}

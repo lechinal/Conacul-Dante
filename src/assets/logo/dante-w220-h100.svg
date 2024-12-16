@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   width="220"
+   height="100"
+   version="1.1"
+   id="svg1"
+   sodipodi:docname="dante-w220-h100.svg"
+   inkscape:version="1.4 (1:1.4+202410161351+e7c3feb100)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs1" />
+  <sodipodi:namedview
+     id="namedview1"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:zoom="5.1437693"
+     inkscape:cx="95.455291"
+     inkscape:cy="47.144416"
+     inkscape:window-width="1920"
+     inkscape:window-height="945"
+     inkscape:window-x="2560"
+     inkscape:window-y="32"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="g1" />
+  <g
+     id="g1">
+    <title
+       id="title1">Layer 1</title>
+    <text
+       font-weight="bold"
+       xml:space="preserve"
+       text-anchor="start"
+       font-family="Noto Sans JP"
+       font-size="24"
+       id="svg_1"
+       y="31.5"
+       x="5"
+       stroke-width="0"
+       stroke="#000"
+       fill="#000000">CONACUL DANTE</text>
+    <text
+       font-style="italic"
+       transform="matrix(1.31967,0,0,1,-36.0427,0)"
+       stroke="#000000"
+       xml:space="preserve"
+       text-anchor="start"
+       font-family="'Noto Sans JP'"
+       font-size="24px"
+       id="svg_2"
+       y="59.5"
+       x="45.788818"
+       stroke-width="0"
+       fill="#000000">Luxury Estate</text>
+  </g>
+</svg>
