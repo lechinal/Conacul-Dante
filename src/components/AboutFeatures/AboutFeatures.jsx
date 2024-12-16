@@ -25,7 +25,7 @@ function AboutFeatures() {
     },
     {
       icon: "🌿",
-      title: "Liniște și Relaxareeeee",
+      title: "Liniște și Relaxare",
       description:
         "Conacul Dante este un loc perfect pentru relaxare, înconjurat de natură, unde poți să te deconectezi complet și să te bucuri de liniștea absolută.",
     },
