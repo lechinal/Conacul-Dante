@@ -4,9 +4,12 @@
   width: 100%;
   max-width: 1200px;
   margin: 0 auto;
-  aspect-ratio: 500/540;
+  /* aspect-ratio: 500/540; */
+ 
 
   margin-bottom: 20px;
+
+
 }
 
 .slide {
@@ -14,9 +17,11 @@
   height: 100%;
   border-radius: 10px;
   background-position: center;
-  background-size: cover;
+  background-size: contain;
   background-repeat: no-repeat;
   transition: transform 0.5s ease;
+
+ 
 }
 
 .sliderLeft,
@@ -71,4 +76,10 @@
 
 .activeDot {
   color: #fc9e4f;
+}
+
+@media (max-width: 768px) {
+  .dotsContainer {
+    bottom: -15px; /* Micșorează distanța pe mobil */
+  }
 }
