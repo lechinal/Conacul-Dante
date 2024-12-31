@@ -1,0 +1,15 @@
+.quickContactSection {
+  background-color: var(--secondaryBackgroundColor);
+  color: var(--backgroundColor);
+  padding: 30px;
+  border-radius: var(--borderRadius20);
+  margin: 40px 0;
+}
+
+.contactInfo {
+  margin-top: var(--gap20);
+}
+
+.contactInfo p {
+  margin-bottom: var(--gap10);
+}

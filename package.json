@@ -13,6 +13,7 @@
     "deploy": "node node_modules/gh-pages/bin/gh-pages-clean.js && gh-pages -d dist"
   },
   "dependencies": {
+    "@react-google-maps/api": "^2.20.5",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "react-loader-spinner": "^6.1.6",

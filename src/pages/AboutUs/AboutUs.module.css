@@ -1,0 +1,164 @@
+.aboutContainer {
+  padding: 40px 20px;
+  margin: 0 auto;
+  max-width: 100%;
+
+  background-color: var(--backgroundColor);
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.title {
+  font-size: var(--fontSize30);
+  color: var(--textColor);
+  margin-bottom: var(--gap10);
+  font-family: var(--font-heading);
+}
+
+.subtitle {
+  font-size: var(--fontSize20);
+  color: var(--primaryColor);
+  margin-bottom: var(--gap20);
+  font-family: var(--font-heading);
+}
+
+.contentGrid {
+  display: flex;
+  flex-direction: column;
+  gap: var(--gap20);
+  margin-bottom: 40px;
+}
+
+.textContent {
+  padding: 20px;
+  background-color: var(--backgroundColor2);
+  border-radius: var(--borderRadius20);
+}
+
+.paragraph {
+  font-size: var(--fontSize16);
+  color: var(--textColor3);
+  margin-bottom: var(--gap20);
+  line-height: var(--fontHeightText16);
+}
+
+.highlight {
+  font-size: var(--fontSize18);
+  color: var(--primaryColor);
+  font-family: var(--font-heading);
+  margin: var(--gap20) 0;
+}
+
+.teamSection {
+  background-color: var(--secondaryBackgroundColor);
+  color: var(--backgroundColor);
+  padding: 30px 20px;
+  border-radius: var(--borderRadius20);
+  margin-top: 30px;
+}
+
+.valueGrid {
+  display: flex;
+  flex-direction: column;
+  gap: var(--gap20);
+  margin-top: var(--gap20);
+}
+
+.valueCard {
+  background-color: var(--backgroundColor);
+  padding: 20px;
+  border-radius: var(--borderRadius20);
+  text-align: center;
+}
+
+.valueTitle {
+  color: var(--primaryColor);
+  font-size: var(--fontSize18);
+  margin-bottom: var(--gap10);
+}
+
+.valueText {
+  color: var(--textColor3);
+  font-size: var(--fontSize14);
+}
+
+/* Tablet (768px și mai mare) */
+@media (min-width: 768px) {
+  .aboutContainer {
+    padding: 60px 40px;
+    max-width: 900px;
+  }
+
+  .title {
+    font-size: var(--fontSize40);
+  }
+
+  .subtitle {
+    font-size: var(--fontSize22);
+  }
+
+  .contentGrid {
+    gap: var(--gap25);
+  }
+
+  .paragraph {
+    font-size: var(--fontSize18);
+  }
+
+  .highlight {
+    font-size: var(--fontSize20);
+  }
+
+  .teamSection {
+    padding: 40px;
+  }
+
+  .valueGrid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--gap25);
+  }
+}
+
+/* Desktop (1024px și mai mare) */
+@media (min-width: 1024px) {
+  .aboutContainer {
+    padding: 80px 20px;
+    max-width: 1200px;
+  }
+
+  .title {
+    font-size: var(--fontSize50);
+  }
+
+  .contentGrid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--gap30);
+  }
+
+  .teamSection {
+    padding: 60px;
+  }
+
+  .valueGrid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--gap30);
+  }
+
+  .highlight {
+    font-size: var(--fontSize22);
+  }
+}
+
+.secondContainer {
+  padding: 40px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+
+  background-color: var(--secondaryColor);
+}

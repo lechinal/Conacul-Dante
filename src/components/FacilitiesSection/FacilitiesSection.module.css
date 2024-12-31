@@ -1,0 +1,39 @@
+.facilitiesSection {
+  margin: 40px 0;
+}
+
+.title {
+  text-align: center;
+  padding: 20px;
+}
+
+.facilitiesGrid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--gap20);
+}
+
+.facilityCard {
+  background-color: var(--backgroundColor2);
+  padding: 25px;
+  border-radius: var(--borderRadius20);
+  text-align: center;
+}
+
+.facilityCard h3 {
+  color: var(--primaryColor);
+  font-size: var(--fontSize20);
+  margin-bottom: var(--gap10);
+}
+
+@media (min-width: 768px) {
+  .facilitiesGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .facilitiesGrid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
