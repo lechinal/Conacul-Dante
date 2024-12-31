@@ -12,11 +12,10 @@ function Map() {
     lat: 45.924388,
     lng: 23.483548,
   };
-
   return (
     <section className={styles.mapSection}>
       <h2 className={styles.subtitle}>Locația Noastră</h2>
-      <LoadScript googleMapsApiKey="AIzaSyAOTHscfcXksu3fCxyNGT99cS4wymEjHCQ">
+      <LoadScript googleMapsApiKey={import.meta.env.VITE_GOOGLE_MAPS_API_KEY}>
         <GoogleMap
           mapContainerStyle={containerStyle}
           center={center}
