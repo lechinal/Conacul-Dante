@@ -29,6 +29,7 @@
   padding: 20px;
   border-radius: var(--borderRadius20);
   margin-bottom: var(--gap20);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
 }
 
 .timelineItem h3 {

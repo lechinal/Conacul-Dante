@@ -36,6 +36,7 @@
   padding: 20px;
   background-color: var(--backgroundColor2);
   border-radius: var(--borderRadius20);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
 }
 
 .paragraph {
@@ -58,6 +59,7 @@
   padding: 30px 20px;
   border-radius: var(--borderRadius20);
   margin-top: 30px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
 }
 
 .valueGrid {
@@ -72,6 +74,7 @@
   padding: 20px;
   border-radius: var(--borderRadius20);
   text-align: center;
+  box-shadow: 0 4px 6px rgba(252, 158, 79, 0.7);
 }
 
 .valueTitle {

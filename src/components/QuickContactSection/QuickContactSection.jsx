@@ -1,4 +1,5 @@
 import styles from "./QuickContactSection.module.css";
+import Button from "../Button/Button";
 
 function QuickContactSection() {
   return (
@@ -9,6 +10,9 @@ function QuickContactSection() {
         <p>Telefon: +40 123 456 789</p>
         <p>Adresă: Strada Horea, nr. 117c - 517536, Pianu De Jos, Alba</p>
       </div>
+      <Button type="button" className={styles.aboutButton}>
+        Contact
+      </Button>
     </section>
   );
 }

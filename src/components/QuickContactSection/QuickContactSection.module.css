@@ -3,7 +3,17 @@
   color: var(--backgroundColor);
   padding: 30px;
   border-radius: var(--borderRadius20);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
   margin: 40px 0;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.subtitle:hover {
+  color: var(--actionColor);
 }
 
 .contactInfo {
@@ -12,4 +22,30 @@
 
 .contactInfo p {
   margin-bottom: var(--gap10);
+  transition: all 0.4s ease-in-out;
+}
+
+.contactInfo p:hover {
+  color: var(--actionColor);
+}
+
+.aboutButton {
+  border: none;
+  border-radius: var(--borderRadius10);
+
+  color: var(--textColor);
+  font-weight: var(--fontWeight700);
+  background-color: var(--actionColor);
+  padding: 10px 32px;
+  margin: 40px 20px;
+
+  text-transform: uppercase;
+  text-align: center;
+  font-size: var(--fontSize14);
+
+  transition: all 0.4s ease-in-out;
+}
+.aboutButton:hover {
+  background-color: var(--primaryColor);
+  color: var(--backgroundColor);
 }
