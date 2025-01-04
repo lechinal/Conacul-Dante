@@ -1,5 +1,7 @@
 .quickContactSection {
-  background-color: var(--secondaryBackgroundColor);
+  /* background-color: var(--secondaryBackgroundColor); */
+  background-color: #4a5b6b;
+
   color: var(--backgroundColor);
   padding: 30px;
   border-radius: var(--borderRadius20);
@@ -10,6 +12,11 @@
   flex-direction: column;
   align-items: center;
   text-align: center;
+
+  background-image: url('data:image/svg+xml;charset=UTF-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400"><circle cx="150" cy="150" r="80" fill="%23fc9e4f" /><circle cx="350" cy="250" r="100" fill="%2351a3a3" /><circle cx="600" cy="100" r="60" fill="%23fefefe" fill-opacity="0.9" /></svg>');
+  background-size: cover; /* Ajustează mărimea */
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 .subtitle:hover {
