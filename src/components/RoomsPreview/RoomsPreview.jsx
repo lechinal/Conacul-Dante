@@ -4,8 +4,15 @@ import styles from "./RoomsPreview.module.css";
 import { roomsImages } from "../../assets/images/imageData.js";
 
 import ImageSlider from "../ImageSlider/ImageSlider";
+import { useNavigate } from "react-router-dom";
 
 function RoomsPreview() {
+  const navigate = useNavigate();
+
+  const handleClick = () => {
+    navigate("/booking");
+  };
+
   return (
     <section className={styles.rooms}>
       <div className={styles.titleBox}>
@@ -43,7 +50,9 @@ function RoomsPreview() {
         </div>
       </div>
       <div className={styles.buttonBox}>
-        <Button className={styles.roomsButton}>Rezervă acum</Button>
+        <Button className={styles.roomsButton} onClick={handleClick}>
+          Rezervă acum
+        </Button>
       </div>
     </section>
   );

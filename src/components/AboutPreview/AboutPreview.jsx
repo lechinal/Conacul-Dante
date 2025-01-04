@@ -7,8 +7,14 @@ import Button from "../Button/Button.jsx";
 import oak2 from "../../assets/svg/oak-tree-M-ActiveColor.svg";
 
 import AboutFeatures from "../AboutFeatures/AboutFeatures.jsx";
+import { useNavigate } from "react-router-dom";
 
 function IntroductionSection() {
+  const navigate = useNavigate();
+
+  const handleClick = () => {
+    navigate("/aboutUs");
+  };
   return (
     <section className={styles.introduction}>
       <div className={styles.box}>
@@ -36,7 +42,11 @@ function IntroductionSection() {
         <AboutFeatures />
       </div>
       <div className={styles.buttonBox}>
-        <Button type="button" className={styles.aboutButton}>
+        <Button
+          type="button"
+          className={styles.aboutButton}
+          onClick={handleClick}
+        >
           Despre Noi
         </Button>
       </div>

@@ -1,8 +1,15 @@
 import Button from "../Button/Button";
 import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import styles from "./BookingCallToAction.module.css";
 
 function BookingCallToAction() {
+  const navigate = useNavigate();
+
+  const handleClick = () => {
+    console.log("Navigare către pagina rezervări");
+    navigate("/booking");
+  };
   return (
     <section className={styles.bookingCTA}>
       <div className={styles.titleBox}>
@@ -15,7 +22,7 @@ function BookingCallToAction() {
             Descoperiți eleganța și rafinamentul la Conacul Dante – locul
             perfect unde visele devin realitate.
             <br />
-            <Link to="/rezervari" className={styles.link}>
+            <Link to="/booking" className={styles.link}>
               Rezervări disponibile acum
             </Link>
           </p>
@@ -25,7 +32,7 @@ function BookingCallToAction() {
             Conacul Dante vă oferă un refugiu de lux, unde fiecare moment este
             transformat în amintiri prețioase.
             <br />
-            <Link to="/rezervari" className={styles.link}>
+            <Link to="/booking" className={styles.link}>
               Rezervați acum pentru a vă asigura locul!
             </Link>
           </p>
@@ -67,7 +74,7 @@ function BookingCallToAction() {
         </div>
         <div className={styles.card}>
           <p>
-            <Link to="/rezervari" className={styles.link}>
+            <Link to="/booking" className={styles.link}>
               Rezervați astăzi
             </Link>{" "}
             pentru a experimenta luxul și ospitalitatea care ne definesc!
@@ -76,7 +83,7 @@ function BookingCallToAction() {
       </div>
 
       <div className={styles.buttonBox}>
-        <Button className={styles.bookingButton}>
+        <Button className={styles.bookingButton} onClick={handleClick}>
           Rezervă-ți experiența unică
         </Button>
       </div>

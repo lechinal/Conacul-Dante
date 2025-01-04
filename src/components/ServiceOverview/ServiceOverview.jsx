@@ -1,7 +1,17 @@
+import { useNavigate } from "react-router-dom";
 import Button from "../Button/Button";
 import styles from "./ServiceOverview.module.css";
 
 function ServiceOverview() {
+  const navigate = useNavigate();
+
+  const handleClick = () => {
+    navigate("/booking");
+  };
+
+  const handleClickServices = () => {
+    navigate("/services");
+  };
   return (
     <section className={styles.services}>
       <div className={styles.titleBox}>
@@ -32,7 +42,11 @@ function ServiceOverview() {
               <div className={styles.cardBack}>
                 <h3>Descoperă mai multe</h3>
                 <p>Rezervă acum și bucură-te de o experiență unică!</p>
-                <Button type="button" className={styles.bookingButton}>
+                <Button
+                  type="button"
+                  className={styles.bookingButton}
+                  onClick={handleClick}
+                >
                   Rezervă acum
                 </Button>
               </div>
@@ -57,7 +71,11 @@ function ServiceOverview() {
               <div className={styles.cardBack}>
                 <h3>Descoperă mai multe</h3>
                 <p>Rezervă acum și bucură-te de o experiență unică!</p>
-                <Button type="button" className={styles.bookingButton}>
+                <Button
+                  type="button"
+                  className={styles.bookingButton}
+                  onClick={handleClick}
+                >
                   Rezervă acum
                 </Button>
               </div>
@@ -78,7 +96,11 @@ function ServiceOverview() {
               <div className={styles.cardBack}>
                 <h3>Descoperă mai multe</h3>
                 <p>Rezervă acum și bucură-te de o experiență unică!</p>
-                <Button type="button" className={styles.bookingButton}>
+                <Button
+                  type="button"
+                  className={styles.bookingButton}
+                  onClick={handleClick}
+                >
                   Rezervă acum
                 </Button>
               </div>
@@ -98,7 +120,11 @@ function ServiceOverview() {
               <div className={styles.cardBack}>
                 <h3>Descoperă mai multe</h3>
                 <p>Rezervă acum și bucură-te de o experiență unică!</p>
-                <Button type="button" className={styles.bookingButton}>
+                <Button
+                  type="button"
+                  className={styles.bookingButton}
+                  onClick={handleClick}
+                >
                   Rezervă acum
                 </Button>
               </div>
@@ -108,7 +134,7 @@ function ServiceOverview() {
       </div>
 
       <div className={styles.buttonBox}>
-        <Button className={styles.servicesButton}>
+        <Button className={styles.servicesButton} onClick={handleClickServices}>
           Descoperă Mai Multe Servicii
         </Button>
       </div>

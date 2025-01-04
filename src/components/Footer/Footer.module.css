@@ -57,6 +57,11 @@
 }
 
 /* .copyright */
+
+.copyright {
+  cursor: pointer;
+}
+
 .copyright img {
   transition: color 0.3s ease-in-out;
 }

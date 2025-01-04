@@ -1,4 +1,4 @@
-import { NavLink } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
 import styles from "./Footer.module.css";
 
 import { SocialIcon } from "react-social-icons";
@@ -6,7 +6,13 @@ import logoDanteSmall from "../../assets/logo/dante-small-footer.svg";
 import pin from "../../assets/svg/location-pin.svg";
 import phone from "../../assets/svg/phone.svg";
 import email from "../../assets/svg/mail.svg";
+
 function Footer() {
+  const navigate = useNavigate();
+
+  const handleLogoClick = () => {
+    navigate("/");
+  };
   return (
     <footer className={styles.footer}>
       <div className={styles.social}>
@@ -73,7 +79,7 @@ function Footer() {
         </div>
       </div>
 
-      <div className={styles.copyright}>
+      <div className={styles.copyright} onClick={handleLogoClick}>
         <img src={logoDanteSmall} alt="smallLogo" />
         <p>Copyright © {new Date().getFullYear()} Conacul Dante</p>
       </div>

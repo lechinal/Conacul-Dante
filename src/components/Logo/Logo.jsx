@@ -1,10 +1,17 @@
 import styles from "./Logo.module.css";
+import { useNavigate } from "react-router-dom";
 
 import logoDante from "../../assets/logo/dante-w220-h100.svg";
 import logoDanteSmall from "../../assets/logo/dante-small.svg";
 function Logo() {
+  const navigate = useNavigate();
+
+  const handleLogoClick = () => {
+    navigate("/");
+  };
+
   return (
-    <div className={styles.logo}>
+    <div className={styles.logo} onClick={handleLogoClick}>
       {/* <img src={logoDante} className={styles.logo} alt="logo" /> */}
       <img
         src={logoDante}
