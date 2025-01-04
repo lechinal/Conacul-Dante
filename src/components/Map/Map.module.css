@@ -22,7 +22,7 @@
 
 .subtitleBox > svg {
   animation: scaleEffect 1.5s infinite ease-in-out;
-  color: var(--primaryColor);
+  color: var(--actionColor);
 }
 
 @keyframes scaleEffect {

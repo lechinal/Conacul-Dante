@@ -164,4 +164,9 @@
   gap: 15px;
 
   background-color: var(--secondaryColor);
+
+  background-image: url("../../assets/images/okasBackground_2560x1440-GRI.png");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
