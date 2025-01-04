@@ -24,9 +24,9 @@
   transition: all 0.4s ease-in-out;
 }
 
-.bookingCTAText p:hover {
+/* .bookingCTAText p:hover {
   color: var(--actionColor);
-}
+} */
 .bookingButton {
   border: none;
   border-radius: var(--borderRadius10);
@@ -48,8 +48,6 @@
   color: var(--textColor);
 }
 
-/* new */
-
 .card {
   background-color: var(--backgroundColor2);
   border-radius: var(--borderRadius20);
@@ -63,6 +61,8 @@
 .card:hover {
   transform: translateY(-10px);
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  color: var(--actionColor);
+  /* font-weight: var(--fontWeight700); */
 }
 
 .card p {
@@ -71,7 +71,33 @@
   margin: 0;
 }
 
-.card b {
-  color: var(--actionColor);
+.link {
   font-weight: var(--fontWeight700);
+  color: var(--primaryColor);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+.link:hover {
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+/* Media queries */
+
+@media (min-width: 1600px) {
+  .bookingCTAText {
+    justify-content: space-between; /* Distribuie cardurile pe două rânduri */
+  }
+
+  .card {
+    flex: 1 1 calc(25% - var(--gap20)); /* Fiecare card va ocupa 25% din lățimea containerului */
+    max-width: calc(
+      25% - var(--gap20)
+    ); /* Ajustează dimensiunea maximă a cardurilor */
+  }
+}
+
+@media (max-width: 1599px) {
+  .card {
+    max-width: 300px; /* Cardurile vor rămâne de maxim 300px lățime */
+  }
 }
