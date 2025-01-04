@@ -13,7 +13,7 @@
 .statItem {
   text-align: center;
   color: var(--backgroundColor);
-  background-color: var(--secondaryBackgroundColor);
+  /* background-color: var(--secondaryBackgroundColor); */
   background-color: #4a5b6b;
   padding: 20px;
 
@@ -24,7 +24,7 @@
 }
 
 .statItem:hover {
-  border: 2px solid var(--secondaryBackgroundColor);
+  border: 2px solid #4a5b6b;
   background-color: var(--actionColor);
   box-shadow: 0 6px 8px rgba(252, 158, 79, 0.8);
 }
