@@ -10,6 +10,7 @@
 
 .subtitle {
   font-weight: var(--fontWeight700);
+  text-shadow: 2px 2px 5px rgba(252, 158, 79, 0.6);
 }
 
 .timeline {

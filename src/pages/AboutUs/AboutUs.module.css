@@ -55,6 +55,7 @@
 
 .teamSection {
   background-color: var(--secondaryBackgroundColor);
+  background-color: #4a5b6b;
   color: var(--backgroundColor);
   padding: 30px 20px;
   border-radius: var(--borderRadius20);
