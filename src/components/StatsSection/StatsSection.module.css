@@ -12,17 +12,27 @@
 }
 .statsSection:hover {
   background-color: var(--actionColor);
-  h3 {
-    color: white;
-  }
-  p {
-    color: black;
-  }
 }
+
+.statsSection:hover .statItem {
+  border: 2px solid var(--backgroundColor);
+}
+
+.statsSection:hover .statItem h3 {
+  color: var(--backgroundColor);
+}
+
+.statsSection:hover .statItem p {
+  color: var(--secondaryBackgroundColor);
+}
+
 .statItem {
   text-align: center;
   color: var(--backgroundColor);
   padding: 20px;
+
+  border: 2px solid var(--actionColor);
+  border-radius: var(--borderRadius20);
 }
 
 .statItem h3 {
