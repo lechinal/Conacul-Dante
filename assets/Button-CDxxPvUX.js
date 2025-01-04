@@ -1,0 +1,1 @@
+import{j as s}from"./index-DsR6JfK3.js";const u="_button_1jibt_1",b={button:u};function e({children:t,className:o,onClick:n}){return s.jsx("button",{className:`${b.button} ${o}`,onClick:n,children:t})}export{e as B};
