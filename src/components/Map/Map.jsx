@@ -1,6 +1,11 @@
+import { useState } from "react";
+
 import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
 import "leaflet/dist/leaflet.css";
 import L from "leaflet";
+import { MapPinHouse } from "lucide-react";
+
+import Button from "../Button/Button";
 import styles from "./Map.module.css";
 
 const customIcon = new L.Icon({
@@ -15,29 +20,43 @@ const customIcon = new L.Icon({
 });
 
 function Map() {
+  const [isMapVisible, setIsMapVisible] = useState(false);
   const position = [45.92425, 23.48361];
+
+  const toggleMapVisibility = () => {
+    setIsMapVisible((prev) => !prev);
+  };
   return (
     <section className={styles.mapSection}>
-      <h2 className={styles.subtitle}>Locația Noastră</h2>
-      <div className={styles.mapWrapper}>
-        <MapContainer
-          center={position}
-          zoom={13}
-          style={{ height: "500px", width: "100%" }}
-        >
-          <TileLayer
-            url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
-            attribution='&copy; <a href="https://osm.org/copyright">OpenStreetMap</a> contributors'
-          />
-          <Marker position={position} icon={customIcon}>
-            <Popup>
-              Conacul Dante
-              <p>Strada Horea, nr. 117c</p>
-              <p>517536</p>
-            </Popup>
-          </Marker>
-        </MapContainer>
+      <div className={styles.subtitleBox}>
+        <MapPinHouse size={35} />
+        <Button className={styles.mapButton} onClick={toggleMapVisibility}>
+          Locația Noastră
+        </Button>
       </div>
+
+      {isMapVisible && (
+        <div className={styles.mapWrapper}>
+          <MapContainer
+            center={position}
+            zoom={13}
+            style={{ height: "500px", width: "100%" }}
+          >
+            <TileLayer
+              url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+              attribution='&copy; <a href="https://osm.org/copyright">OpenStreetMap</a> contributors'
+            />
+            <Marker position={position} icon={customIcon}>
+              <Popup>
+                Conacul Dante
+                <p>Strada Horea, nr. 117c</p>
+                <p>517536</p>
+                <p>Pianu de Jos, Alba</p>
+              </Popup>
+            </Marker>
+          </MapContainer>
+        </div>
+      )}
     </section>
   );
 }

@@ -3,36 +3,37 @@
   grid-template-columns: 1fr;
   gap: var(--gap20);
   padding: 20px;
-  background-color: var(--secondaryBackgroundColor);
+  /* background-color: var(--textColor2); */
   border-radius: var(--borderRadius20);
   margin: 40px 0;
 
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
   transition: all 0.4s ease-in-out;
-}
-.statsSection:hover {
-  background-color: var(--actionColor);
-}
-
-.statsSection:hover .statItem {
-  border: 2px solid var(--backgroundColor);
-}
-
-.statsSection:hover .statItem h3 {
-  color: var(--backgroundColor);
-}
-
-.statsSection:hover .statItem p {
-  color: var(--secondaryBackgroundColor);
 }
 
 .statItem {
   text-align: center;
   color: var(--backgroundColor);
+  background-color: var(--secondaryBackgroundColor);
   padding: 20px;
 
   border: 2px solid var(--actionColor);
   border-radius: var(--borderRadius20);
+  transition: all 0.4s ease-in-out;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+}
+
+.statItem:hover {
+  border: 2px solid var(--secondaryBackgroundColor);
+  background-color: var(--actionColor);
+  box-shadow: 0 6px 8px rgba(252, 158, 79, 0.8);
+}
+
+.statItem:hover h3 {
+  color: var(--backgroundColor);
+}
+
+.statItem:hover p {
+  color: var(--secondaryBackgroundColor);
 }
 
 .statItem h3 {

@@ -60,7 +60,7 @@ function Footer() {
         <div className={styles.contactBox}>
           <div className={styles.contactAddress}>
             <img src={pin} alt="address" width={20} />
-            <p> Strada Horea, nr. 117c - 517536, Pianu De Jos, Alba</p>
+            <p> Strada Horea, nr. 117c - 517536, Pianu de Jos, Alba</p>
           </div>
           <div className={styles.contactPhone}>
             <img src={phone} alt="phone" width={20} />

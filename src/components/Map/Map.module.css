@@ -1,28 +1,71 @@
 .mapSection {
-  margin: 50px 0;
-  height: 500px;
-  border-radius: var(--borderRadius20);
+  margin: 20px 0;
+  /* height: 500px; */
   overflow: hidden;
 
   text-align: center;
-  background-color: var(--actionColor);
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
 }
 
+.subtitleBox {
+  /* background-color: var(--actionColor); */
+  border-radius: var(--borderRadius10);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  cursor: pointer;
+  margin-bottom: 20px;
+
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.subtitleBox > svg {
+  animation: scaleEffect 1.5s infinite ease-in-out;
+  color: var(--primaryColor);
+}
+
+@keyframes scaleEffect {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+}
 .subtitle {
   margin-bottom: 1rem;
   padding: 13px;
+  cursor: pointer;
 }
 
 @media (min-width: 768px) {
-  .mapSection {
-    height: 400px;
-  }
+  /* .mapSection {
+    height: 600px;
+  } */
 }
 
 @media (min-width: 1024px) {
-  .mapSection {
-    height: 500px;
-    overflow: visible;
-  }
+}
+
+.mapButton {
+  border: none;
+  border-radius: var(--borderRadius10);
+
+  color: var(--textColor);
+  font-weight: var(--fontWeight700);
+  background-color: var(--actionColor);
+  padding: 10px 32px;
+  margin: 40px 20px;
+
+  text-transform: uppercase;
+  text-align: center;
+  font-size: var(--fontSize14);
+
+  transition: all 0.4s ease-in-out;
+}
+.mapButton:hover {
+  background-color: var(--primaryColor);
+  color: var(--backgroundColor);
 }

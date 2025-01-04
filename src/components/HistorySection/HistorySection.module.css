@@ -8,6 +8,10 @@
   color: var(--actionColor);
 }
 
+.subtitle {
+  font-weight: var(--fontWeight700);
+}
+
 .timeline {
   position: relative;
   padding: 20px 0;
@@ -18,7 +22,7 @@
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
-  width: 2px;
+  width: 4px;
   height: 100%;
   background-color: var(--actionColor);
   display: none;
