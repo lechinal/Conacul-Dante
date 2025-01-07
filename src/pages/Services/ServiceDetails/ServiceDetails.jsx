@@ -109,7 +109,14 @@ function ServicesDetails() {
   const service = servicesDetails[serviceId];
 
   if (!service) {
-    return <div className={styles.error}>Serviciul nu a fost găsit</div>;
+    return (
+      <div className={styles.error}>
+        Serviciul nu a fost găsit!
+        <Link to="/services" className={styles.backButton}>
+          Înapoi la Servicii
+        </Link>
+      </div>
+    );
   }
 
   return (

@@ -134,7 +134,7 @@
   margin-top: 3rem;
 }
 
-.button,
+/* .button,
 .secondaryButton {
   background: none;
   border: none;
@@ -142,26 +142,29 @@
   font-weight: 500;
   cursor: pointer;
   transition: color 0.3s ease;
-}
+} */
 
 .button {
-  background-color: var(--primaryColor);
+  background-color: var(--actionColor);
   color: white;
   border: none;
+  transition: all 0.4s ease-in-out;
 }
 
 .button:hover {
-  color: var(--primaryColorDark);
+  color: var(--textColor);
+  background-color: var(--primaryColor);
+  transform: translateY(-2px);
 }
 
 .secondaryButton {
-  background-color: transparent;
-  color: var(--primaryColor);
-  border: 2px solid var(--primaryColor);
+  background-color: var(--primaryColor);
+  color: var(--textColor);
+  transition: all 0.4s ease-in-out;
 }
 
 .secondaryButton:hover {
-  background-color: var(--primaryColor);
+  background-color: var(--actionColor);
   color: white;
   transform: translateY(-2px);
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
