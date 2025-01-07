@@ -41,13 +41,9 @@
   cursor: pointer;
 }
 
-@media (min-width: 768px) {
-  /* .mapSection {
-    height: 600px;
-  } */
-}
-
-@media (min-width: 1024px) {
+.mapWrapper {
+  border: 2px solid var(--actionColor);
+  border-radius: var(--borderRadius8);
 }
 
 .mapButton {
