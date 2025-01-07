@@ -24,7 +24,7 @@
 .navList li {
   border-radius: var(--borderRadius8);
   padding: 10px;
-  color: black;
+  color: var(--textColor);
   color: var(--textColor1);
   transition: all 0.4s ease-in-out;
 }
