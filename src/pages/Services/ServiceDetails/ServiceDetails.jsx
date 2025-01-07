@@ -1,11 +1,20 @@
 // import React from "react";
-import { useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import { Link } from "react-router-dom";
 import styles from "../ServiceDetails/ServiceDetails.module.css";
 import Button from "../../../components/Button/Button";
 
 function ServicesDetails() {
   const { serviceId } = useParams();
+  const navigate = useNavigate();
+
+  const handleClickBooking = () => {
+    navigate("/booking");
+  };
+
+  const handleClickContact = () => {
+    navigate("/contact");
+  };
 
   const servicesDetails = {
     cazare: {
@@ -148,8 +157,15 @@ function ServicesDetails() {
         </div>
 
         <div className={styles.cta}>
-          <Button className={styles.button}>Rezervă Acum</Button>
-          <Button className={styles.secondaryButton}>Contactează-ne</Button>
+          <Button className={styles.button} onClick={handleClickBooking}>
+            Rezervă Acum
+          </Button>
+          <Button
+            className={styles.secondaryButton}
+            onClick={handleClickContact}
+          >
+            Contactează-ne
+          </Button>
         </div>
       </section>
     </div>
