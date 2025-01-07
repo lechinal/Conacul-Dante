@@ -77,7 +77,7 @@
   .list li {
     margin: 0.5rem 0;
     padding-bottom: 0.5rem;
-    position: relative; /* Am adaugat pozitionare relativa pt a putea folosi pseudo elementul ::after care va fi pozitionat absolut*/
+    position: relative; /*  pozitionare relativa pt a putea folosi pseudo elementul ::after care va fi pozitionat absolute*/
     text-align: center;
   }
 

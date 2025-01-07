@@ -5,10 +5,7 @@
 
 .title {
   text-align: center;
-  color: var(--actionColor);
-}
-
-.subtitle {
+  color: var(--textColor3);
   font-weight: var(--fontWeight700);
   text-shadow: 2px 2px 5px rgba(252, 158, 79, 0.6);
 }
@@ -35,6 +32,7 @@
   border-radius: var(--borderRadius20);
   margin-bottom: var(--gap20);
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+  text-align: center;
 }
 
 .timelineItem h3 {
