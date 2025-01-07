@@ -6,7 +6,7 @@ function ServiceDetailsNav() {
   return (
     <div className={styles.container}>
       <nav className={styles.navLinks}>
-        <h2>Explorează alte servicii:</h2>
+        {/* <h2>Explorează alte servicii:</h2> */}
         <ul className={styles.navList}>
           {services.map((service) => (
             <li key={service.id}>
@@ -14,6 +14,9 @@ function ServiceDetailsNav() {
                 to={`/services/${service.id}`}
                 className={styles.navElement}
               >
+                {service.icon && (
+                  <span className={styles.icon}>{service.icon}</span>
+                )}
                 {service.title}
               </NavLink>
             </li>

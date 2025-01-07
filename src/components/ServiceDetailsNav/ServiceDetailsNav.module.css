@@ -1,20 +1,49 @@
+.container {
+  margin: 40px;
+
+  border-radius: var(--borderRadius20);
+  background: linear-gradient(
+    45deg,
+    var(--primaryColor),
+    var(--secondaryColor)
+  );
+}
 .navList {
   display: flex;
-  gap: 1rem;
+  gap: 20px;
+  align-items: center;
+  justify-content: center;
   flex-wrap: wrap;
   list-style: none;
   padding: 0;
   margin-top: 2rem;
 }
+.navList a:global(.active) {
+  color: var(--actionColor);
+}
+.navList li {
+  border-radius: var(--borderRadius8);
+  padding: 10px;
+  color: black;
+  color: var(--textColor1);
+  transition: all 0.4s ease-in-out;
+}
 
+.navList li:hover {
+  transform: translateY(-3px);
+}
 .navElement {
   display: flex;
   align-items: center;
-  gap: 0.5rem;
+  gap: 16px;
   text-decoration: none;
   color: inherit;
 }
 
 .navElement {
   text-decoration: underline;
+}
+
+.navLinks h2 {
+  padding: 10px;
 }
