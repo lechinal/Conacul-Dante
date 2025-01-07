@@ -79,7 +79,7 @@
 .description {
   color: white;
   margin-bottom: 24px;
-  line-height: 1.5;
+  line-height: 1.6;
 }
 
 .button {
@@ -89,10 +89,6 @@
   font-weight: 500;
   cursor: pointer;
   transition: color 0.3s ease;
-}
-
-.button:hover {
-  color: var(--primaryColorDark);
 }
 
 /* Media Queries */

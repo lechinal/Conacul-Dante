@@ -1,14 +1,19 @@
 import styles from "../../pages/Services/Services.module.css";
 import Button from "../Button/Button";
+import { useNavigate } from "react-router-dom";
 
-function ServiceCard({ icon: Icon, title, description }) {
+function ServiceCard({ id, icon: Icon, title, description }) {
+  const navigate = useNavigate();
+
   return (
     <div className={styles.card}>
       <div className={styles.cardContent}>
         <div className={styles.iconWrapper}>{Icon}</div>
         <h3 className={styles.title}>{title}</h3>
         <p className={styles.description}>{description}</p>
-        <Button>Află mai multe</Button>
+        <Button onClick={() => navigate(`/services/${id}`)}>
+          Află mai multe
+        </Button>
       </div>
     </div>
   );

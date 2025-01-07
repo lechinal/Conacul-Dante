@@ -5,6 +5,7 @@ import ServiceCard from "../../components/ServiceCard/ServiceCard";
 function Services() {
   const services = [
     {
+      id: "cazare",
       icon: (
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -28,6 +29,7 @@ function Services() {
       description: "Camere spațioase și confortabile cu vedere spectaculoasă.",
     },
     {
+      id: "restaurant",
       icon: (
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -52,6 +54,7 @@ function Services() {
         "Bucătărie tradițională și internațională cu specific local.",
     },
     {
+      id: "piscina",
       icon: (
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -73,9 +76,10 @@ function Services() {
       ),
       title: "Piscină",
       description:
-        "Un loc perfect pentru relaxare: piscina noastră și barul cu băuturi răcoritoare la doar câțiva pași.",
+        "Un loc perfect pentru relaxare: piscina noastră și barul cu băuturi răcoritoare.",
     },
     {
+      id: "ciubar",
       icon: (
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -96,6 +100,7 @@ function Services() {
         "Experiență tradițională în ciubarul nostru din lemn cu apă încălzită.",
     },
     {
+      id: "gratar",
       icon: (
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -120,6 +125,7 @@ function Services() {
         "Pregătiți preparate la grătar sau ceaun în zona special amenajată.",
     },
     {
+      id: "parcare",
       icon: (
         <svg
           xmlns="http://www.w3.org/2000/svg"

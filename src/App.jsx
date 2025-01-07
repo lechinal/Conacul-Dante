@@ -1,6 +1,6 @@
 import { Suspense, lazy, useEffect } from "react";
-import { Route, Routes, useNavigate } from "react-router-dom";
-import { useLocation } from "react-router-dom";
+import { Route, Routes, useLocation } from "react-router-dom";
+// import { useLocation } from "react-router-dom";
 import { Loader } from "./components/Loader/Loader.jsx";
 
 const Header = lazy(() => import("./components/Header/Header.jsx"));
@@ -10,7 +10,9 @@ const Services = lazy(() => import("./pages/Services/Services.jsx"));
 const Booking = lazy(() => import("./pages/Booking/Booking.jsx"));
 const Contact = lazy(() => import("./pages/Contact/Contact.jsx"));
 const Footer = lazy(() => import("./components/Footer/Footer.jsx"));
-
+const ServiceDetails = lazy(() =>
+  import("./pages/Services/ServiceDetails/ServiceDetails.jsx")
+);
 import "./App.css";
 
 function App() {
@@ -28,6 +30,7 @@ function App() {
           <Route exact path="/" element={<HomePage />} />
           <Route path="/aboutUs" element={<AboutUs />} />
           <Route path="/services" element={<Services />} />
+          <Route path="/services/:serviceId" element={<ServiceDetails />} />
           <Route path="/booking" element={<Booking />} />
           <Route path="/contact" element={<Contact />} />
         </Routes>
