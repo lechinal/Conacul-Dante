@@ -97,6 +97,7 @@
 .featuresList li:hover {
   transform: translateY(-5px);
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  color: var(--actionColor);
 }
 
 .featuresList li::before {

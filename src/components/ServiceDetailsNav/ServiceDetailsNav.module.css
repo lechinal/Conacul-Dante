@@ -1,0 +1,20 @@
+.navList {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  list-style: none;
+  padding: 0;
+  margin-top: 2rem;
+}
+
+.navElement {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  text-decoration: none;
+  color: inherit;
+}
+
+.navElement {
+  text-decoration: underline;
+}
