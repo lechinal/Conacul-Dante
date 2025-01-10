@@ -1,7 +1,7 @@
 .container {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 2rem 1rem;
+  padding: 32px 16px;
 
   /* background-color: var(--secondaryColor); */
 }
@@ -15,7 +15,7 @@
 .hero {
   position: relative;
   height: 400px;
-  margin-bottom: 3rem;
+  margin-bottom: 54px;
   background: linear-gradient(
     45deg,
     var(--primaryColor),
@@ -51,9 +51,14 @@
 
 .content {
   background: white;
-  border-radius: 15px;
+  border-radius: var(--borderRadius18);
   padding: 2.5rem;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.content:hover {
+  border-radius: var(--borderRadius18);
+  box-shadow: 18px 18px 30px #d1d9e6, -18px -18px 30px #fff;
 }
 
 .description {
@@ -70,7 +75,7 @@
 
 .features h2 {
   font-size: 2rem;
-  margin-bottom: 2rem;
+  margin-bottom: 32px;
   color: var(--textColor);
   font-weight: 600;
   text-align: center;
@@ -132,7 +137,8 @@
   display: flex;
   gap: 1.5rem;
   justify-content: center;
-  margin-top: 3rem;
+  margin-top: 20px;
+  padding: 0 20px 0 0;
 }
 
 .button {
@@ -171,7 +177,7 @@
 /* Media Queries */
 @media (max-width: 768px) {
   .container {
-    padding: 1rem;
+    padding: 16px;
   }
 
   .hero {
@@ -179,11 +185,11 @@
   }
 
   .title {
-    font-size: 2.2rem;
+    font-size: 32px;
   }
 
   .content {
-    padding: 1.5rem;
+    padding: 16px;
   }
 
   .features h2,
