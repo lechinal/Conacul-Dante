@@ -1,14 +1,24 @@
+.sectionContainer {
+  background-image: url(/Conacul-Dante/src/assets/images/okasBackground_2560x1440-GRI.png);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
 .bookingContainer {
   max-width: 600px;
   margin: 0 auto;
   padding: 2rem 1rem;
 }
-
+.bookingContainer h1 {
+  text-align: center;
+  margin-bottom: 20px;
+}
 .bookingForm {
   background-color: white;
   padding: 2rem;
   border-radius: 10px;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  background-color: var(--secondaryColor);
 }
 
 .formGroup {
@@ -19,6 +29,7 @@
   display: block;
   margin-bottom: 0.5rem;
   font-weight: 600;
+  color: var(--primaryColor);
 }
 
 .formGroup input,
@@ -29,6 +40,7 @@
   border: 1px solid #ccc;
   border-radius: 5px;
   transition: border-color 0.3s ease;
+  background-color: var(--actionColor);
 }
 
 .inputError {
@@ -40,20 +52,32 @@
   font-size: 0.875rem;
   margin-top: 0.25rem;
 }
-
-.submitButton {
-  width: 100%;
-  padding: 1rem;
-  background-color: var(--primaryColor);
-  color: white;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
+.buttonBox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 
-.submitButton:hover {
-  background-color: var(--primaryColorDark);
+.buttonBox .submitButton {
+  border: none;
+  border-radius: var(--borderRadius10);
+
+  color: var(--textColor);
+  font-weight: var(--fontWeight700);
+  background-color: var(--actionColor);
+  padding: 10px 32px;
+  margin: 40px 20px;
+
+  text-transform: uppercase;
+  text-align: center;
+  font-size: var(--fontSize14);
+
+  transition: all 0.4s ease-in-out;
+}
+.buttonBox .submitButton:hover {
+  background-color: var(--primaryColor);
+  color: white;
 }
 
 .successMessage {

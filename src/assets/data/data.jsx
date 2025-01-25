@@ -241,3 +241,10 @@ export const servicesDetails = {
       "Rezervarea locului de parcare este recomandată pentru perioadele aglomerate.",
   },
 };
+
+export const rooms = [
+  { id: "camera1", name: "Camera Standard" },
+  { id: "camera2", name: "Camera Premium" },
+  { id: "camera3", name: "Suită" },
+  { id: "camera4", name: "Cameră Familială" },
+];

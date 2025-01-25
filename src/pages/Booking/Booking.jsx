@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from "react";
 import styles from "./Booking.module.css";
+import Button from "../../components/Button/Button";
+import { rooms } from "../../assets/data/data";
 
 function Booking() {
   const [formData, setFormData] = useState({
@@ -78,13 +80,6 @@ function Booking() {
     }
   };
 
-  const rooms = [
-    { id: "camera1", name: "Camera Standard" },
-    { id: "camera2", name: "Camera Premium" },
-    { id: "camera3", name: "Suită" },
-    { id: "camera4", name: "Cameră Familială" },
-  ];
-
   if (isSubmitted) {
     return (
       <div className={styles.successMessage}>
@@ -101,126 +96,129 @@ function Booking() {
   }
 
   return (
-    <div className={styles.bookingContainer}>
-      <h1>Rezervare</h1>
-      <form onSubmit={handleSubmit} className={styles.bookingForm}>
-        <div className={styles.formGroup}>
-          <label>Nume Complet</label>
-          <input
-            type="text"
-            name="name"
-            value={formData.name}
-            onChange={handleChange}
-            className={errors.name ? styles.inputError : ""}
-          />
-          {errors.name && (
-            <span className={styles.errorMessage}>{errors.name}</span>
-          )}
-        </div>
+    <section className={styles.sectionContainer}>
+      <div className={styles.bookingContainer}>
+        <h1>Rezervare</h1>
+        <form onSubmit={handleSubmit} className={styles.bookingForm}>
+          <div className={styles.formGroup}>
+            <label>Nume Complet</label>
+            <input
+              type="text"
+              name="name"
+              value={formData.name}
+              onChange={handleChange}
+              className={errors.name ? styles.inputError : ""}
+            />
+            {errors.name && (
+              <span className={styles.errorMessage}>{errors.name}</span>
+            )}
+          </div>
 
-        <div className={styles.formGroup}>
-          <label>Email</label>
-          <input
-            type="email"
-            name="email"
-            value={formData.email}
-            onChange={handleChange}
-            className={errors.email ? styles.inputError : ""}
-          />
-          {errors.email && (
-            <span className={styles.errorMessage}>{errors.email}</span>
-          )}
-        </div>
+          <div className={styles.formGroup}>
+            <label>Email</label>
+            <input
+              type="email"
+              name="email"
+              value={formData.email}
+              onChange={handleChange}
+              className={errors.email ? styles.inputError : ""}
+            />
+            {errors.email && (
+              <span className={styles.errorMessage}>{errors.email}</span>
+            )}
+          </div>
 
-        <div className={styles.formGroup}>
-          <label>Telefon</label>
-          <input
-            type="tel"
-            name="phone"
-            value={formData.phone}
-            onChange={handleChange}
-            className={errors.phone ? styles.inputError : ""}
-          />
-          {errors.phone && (
-            <span className={styles.errorMessage}>{errors.phone}</span>
-          )}
-        </div>
+          <div className={styles.formGroup}>
+            <label>Telefon</label>
+            <input
+              type="tel"
+              name="phone"
+              value={formData.phone}
+              onChange={handleChange}
+              className={errors.phone ? styles.inputError : ""}
+            />
+            {errors.phone && (
+              <span className={styles.errorMessage}>{errors.phone}</span>
+            )}
+          </div>
 
-        <div className={styles.formGroup}>
-          <label>Check-in</label>
-          <input
-            type="date"
-            name="checkIn"
-            value={formData.checkIn}
-            onChange={handleChange}
-            className={errors.checkIn ? styles.inputError : ""}
-          />
-          {errors.checkIn && (
-            <span className={styles.errorMessage}>{errors.checkIn}</span>
-          )}
-        </div>
+          <div className={styles.formGroup}>
+            <label>Check-in</label>
+            <input
+              type="date"
+              name="checkIn"
+              value={formData.checkIn}
+              onChange={handleChange}
+              className={errors.checkIn ? styles.inputError : ""}
+            />
+            {errors.checkIn && (
+              <span className={styles.errorMessage}>{errors.checkIn}</span>
+            )}
+          </div>
 
-        <div className={styles.formGroup}>
-          <label>Check-out</label>
-          <input
-            type="date"
-            name="checkOut"
-            value={formData.checkOut}
-            onChange={handleChange}
-            className={errors.checkOut ? styles.inputError : ""}
-          />
-          {errors.checkOut && (
-            <span className={styles.errorMessage}>{errors.checkOut}</span>
-          )}
-        </div>
+          <div className={styles.formGroup}>
+            <label>Check-out</label>
+            <input
+              type="date"
+              name="checkOut"
+              value={formData.checkOut}
+              onChange={handleChange}
+              className={errors.checkOut ? styles.inputError : ""}
+            />
+            {errors.checkOut && (
+              <span className={styles.errorMessage}>{errors.checkOut}</span>
+            )}
+          </div>
 
-        <div className={styles.formGroup}>
-          <label>Număr Oaspeți</label>
-          <input
-            type="number"
-            name="guests"
-            min="1"
-            max="10"
-            value={formData.guests}
-            onChange={handleChange}
-          />
-        </div>
+          <div className={styles.formGroup}>
+            <label>Număr Oaspeți</label>
+            <input
+              type="number"
+              name="guests"
+              min="1"
+              max="10"
+              value={formData.guests}
+              onChange={handleChange}
+            />
+          </div>
 
-        <div className={styles.formGroup}>
-          <label>Cameră</label>
-          <select
-            name="room"
-            value={formData.room}
-            onChange={handleChange}
-            className={errors.room ? styles.inputError : ""}
-          >
-            <option value="">Selectează Camera</option>
-            {rooms.map((room) => (
-              <option key={room.id} value={room.id}>
-                {room.name}
-              </option>
-            ))}
-          </select>
-          {errors.room && (
-            <span className={styles.errorMessage}>{errors.room}</span>
-          )}
-        </div>
+          <div className={styles.formGroup}>
+            <label>Cameră</label>
+            <select
+              name="room"
+              value={formData.room}
+              onChange={handleChange}
+              className={errors.room ? styles.inputError : ""}
+            >
+              <option value="">Selectează Camera</option>
+              {rooms.map((room) => (
+                <option key={room.id} value={room.id}>
+                  {room.name}
+                </option>
+              ))}
+            </select>
+            {errors.room && (
+              <span className={styles.errorMessage}>{errors.room}</span>
+            )}
+          </div>
 
-        <div className={styles.formGroup}>
-          <label>Cerințe Speciale</label>
-          <textarea
-            name="specialRequests"
-            value={formData.specialRequests}
-            onChange={handleChange}
-            rows="4"
-          />
-        </div>
-
-        <button type="submit" className={styles.submitButton}>
-          Trimite Rezervare
-        </button>
-      </form>
-    </div>
+          <div className={styles.formGroup}>
+            <label>Cerințe Speciale</label>
+            <textarea
+              name="specialRequests"
+              value={formData.specialRequests}
+              onChange={handleChange}
+              rows="4"
+            />
+          </div>
+          <div className={styles.buttonBox}>
+            <Button type="submit" className={styles.submitButton}>
+              Trimite Rezervare
+            </Button>
+          </div>
+        </form>
+      </div>
+    </section>
   );
 }
 
