@@ -1,24 +1,38 @@
-.sectionContainer {
+/* Contact.module.css */
+
+.contactSection {
   background-image: url(/Conacul-Dante/src/assets/images/okasBackground_2560x1440-GRI.png);
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
+
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
 }
-.bookingContainer {
+
+.contactContainer {
   max-width: 600px;
-  margin: 0 auto;
-  padding: 2rem 1rem;
-}
-.bookingContainer h1 {
-  text-align: center;
-  margin-bottom: 20px;
-}
-.bookingForm {
-  background-color: white;
+  width: 100%;
   padding: 2rem;
   border-radius: 10px;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
   background-color: var(--secondaryColor);
+}
+
+.contactContainer h1 {
+  text-align: center;
+  margin-bottom: 1.5rem;
+  color: #333;
+}
+
+.contactForm {
+  display: flex;
+  flex-direction: column;
 }
 
 .formGroup {
@@ -28,19 +42,24 @@
 .formGroup label {
   display: block;
   margin-bottom: 0.5rem;
-  font-weight: 600;
-  color: var(--primaryColor);
+  font-weight: bold;
+  color: #555;
 }
 
 .formGroup input,
-.formGroup select,
 .formGroup textarea {
   width: 100%;
   padding: 0.75rem;
   border: 1px solid #ccc;
   border-radius: 5px;
+  font-size: 1rem;
   transition: border-color 0.3s ease;
-  background-color: var(--actionColor);
+}
+
+.formGroup input:focus,
+.formGroup textarea:focus {
+  border-color: #007bff;
+  outline: none;
 }
 
 .inputError {
@@ -52,11 +71,10 @@
   font-size: 0.875rem;
   margin-top: 0.25rem;
 }
+
 .buttonBox {
   display: flex;
   justify-content: center;
-  align-items: center;
-  flex-direction: column;
 }
 
 .buttonBox .submitButton {
@@ -75,6 +93,7 @@
 
   transition: all 0.4s ease-in-out;
 }
+
 .buttonBox .submitButton:hover {
   background-color: var(--primaryColor);
   color: white;
@@ -82,9 +101,10 @@
 
 .successMessage {
   text-align: center;
+  background-color: #e9f7ef;
   padding: 2rem;
-  background-color: var(--textColor2);
   border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
 }
 
 .successMessage h2 {
@@ -95,9 +115,34 @@
 .successMessage button {
   margin-top: 1rem;
   padding: 0.75rem 1.5rem;
-  background-color: var(--primaryColor);
+  background-color: #007bff;
   color: white;
   border: none;
   border-radius: 5px;
   cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.successMessage button:hover {
+  background-color: #0056b3;
+}
+
+.contactBox {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 20px;
+
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  background-color: var(--secondaryColor);
+  border-radius: var(--borderRadius10);
+}
+
+.contactAddress,
+.contactPhone,
+.contactEmail {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
 }
