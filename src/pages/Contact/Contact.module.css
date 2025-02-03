@@ -54,6 +54,7 @@
   border-radius: 5px;
   font-size: 1rem;
   transition: border-color 0.3s ease;
+  background-color: var(--actionColor);
 }
 
 .formGroup input:focus,
@@ -145,4 +146,11 @@
   justify-content: center;
   align-items: center;
   gap: 10px;
+}
+
+.customMap {
+  width: 100%;
+  padding: 10px;
+  border-radius: 10px;
+  margin-top: 20px;
 }

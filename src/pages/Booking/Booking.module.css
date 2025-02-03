@@ -43,6 +43,13 @@
   background-color: var(--actionColor);
 }
 
+formGroup input:focus,
+.formGroup textarea:focus,
+formGroup select:focus {
+  border-color: #007bff;
+  outline: none;
+}
+
 .inputError {
   border-color: red;
 }

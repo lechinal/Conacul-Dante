@@ -56,9 +56,9 @@ function Contact() {
         <p>
           Îți mulțumim pentru interes. Te vom contacta în cel mai scurt timp.
         </p>
-        <button onClick={() => setIsSubmitted(false)}>
+        <Button onClick={() => setIsSubmitted(false)}>
           Trimite un alt mesaj
-        </button>
+        </Button>
       </div>
     );
   }
@@ -138,7 +138,7 @@ function Contact() {
           </p>
         </div>
       </div>
-      <div>
+      <div className={styles.customMap}>
         <Map />
       </div>
     </section>

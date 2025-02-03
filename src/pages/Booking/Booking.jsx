@@ -62,6 +62,21 @@ function Booking() {
       localStorage.setItem("pendingBooking", JSON.stringify(formData));
       setIsSubmitted(true);
 
+      // Reseteaza formularul dupa trimitere
+      setFormData({
+        name: "",
+        email: "",
+        phone: "",
+        checkIn: "",
+        checkOut: "",
+        guests: 1,
+        room: "",
+        specialRequests: "",
+      });
+
+      // Sterge datele din localStorage după trimitere
+      localStorage.removeItem("pendingBooking");
+
       // Email pentru confirmare
       const mailtoLink = `mailto:contact@conaculuidante.ro?subject=Cerere Rezervare&body=
         Nume: ${formData.name}
@@ -74,7 +89,10 @@ function Booking() {
         Cerințe Speciale: ${formData.specialRequests}
       `;
 
-      window.location.href = mailtoLink;
+      setTimeout(() => {
+        window.open(mailtoLink, "_blank");
+        // Deschide clientul de email intr-o noua pagina
+      }, 0);
     } else {
       setErrors(formErrors);
     }
@@ -88,9 +106,10 @@ function Booking() {
           Vă mulțumim. Un reprezentant vă va contacta în curând pentru
           confirmare.
         </p>
-        <button onClick={() => setIsSubmitted(false)}>
+
+        <Button onClick={() => setIsSubmitted(false)}>
           Faceți altă rezervare
-        </button>
+        </Button>
       </div>
     );
   }
